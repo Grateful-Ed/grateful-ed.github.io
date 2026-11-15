@@ -329,7 +329,7 @@
                   <text class="t n" x="750" y="364" text-anchor="middle">SUB-AGENTS</text>
                   <text class="t r" x="750" y="387" text-anchor="middle">Evidence clerks</text>
                   <text class="t d" x="750" y="409" text-anchor="middle">Stamp every claim. No verdicts.</text>
-                  <text class="t st" x="750" y="424" text-anchor="middle">Plan seat 208/208 · PR seat 138/138 · Research seat 42/42 stamps upheld</text>
+                  <text class="t st" x="750" y="424" text-anchor="middle">Plan seat 208/208 · PR seat 160/160 · Research seat 42/42 stamps upheld</text>
                 </svg>
               </figure>
               <p>Five seats. I direct and gate: Faye takes the briefs to Claude and brings the reports back, and merges happen only on my explicit word, per PR &mdash; I am the bottleneck by design. Faye manages the project and consults on design: she writes the briefs, runs the reviews, and keeps the records. Claude builds. Agents audit one PR at a time and are gone. Sub-agents keep the evidence: every claim stamped, no verdicts of their own.</p>
@@ -387,7 +387,7 @@
 
               <h3 class="org-h">The Phases</h3>
               <div class="phase"><h4>1 &middot; Mock hosts</h4><p>Two fake warehouse systems built first, so Witness development always has a host to test against. Signed off 2026-11-11.</p><span class="pill">CLOSED</span></div>
-              <div class="phase"><h4>2 &middot; The record</h4><p>2.1 Store core: ten PRs, reviewed and signed off 2026-11-14. 2.2 Configuration layer: under way &mdash; slices 1&ndash;2 merged.</p><span class="pill now">CURRENT</span></div>
+              <div class="phase"><h4>2 &middot; The record</h4><p>2.1 Store core: ten PRs, reviewed and signed off 2026-11-14. 2.2 Configuration layer: under way &mdash; slices 1&ndash;4 merged, slice 5 in progress.</p><span class="pill now">CURRENT</span></div>
               <div class="phase"><h4>3 &middot; Host integration</h4><p>Mirror in, acts out.</p><span class="pill">AHEAD</span></div>
               <div class="phase"><h4>4 &middot; The gate &amp; signed acts</h4><p>The two signed acts: posting a receiving, confirming a load.</p><span class="pill">AHEAD</span></div>
               <div class="phase"><h4>5 &middot; Interpretation &amp; delegation</h4><p>Configured model services, the interpretation layer, the delegator.</p><span class="pill">AHEAD</span></div>
@@ -395,6 +395,19 @@
               <div class="phase"><h4>7 &middot; Surfaces</h4><p>Desk, phone, glasses, finger piece.</p><span class="pill">AHEAD</span></div>
               <div class="phase"><h4>8 &middot; The worker loop, whole</h4><p>Receiving cross-check, voice completion, outage behavior.</p><span class="pill">AHEAD</span></div>
               <p class="loopnote">A phase closes only when every PR is merged, register items are deleted or formally transferred, contracts are frozen at a named version, the hard pass is done &mdash; and William signs off.</p>
+
+              <h3 class="org-h">The Three Repos &mdash; Dev, Quality, Prod</h3>
+              <p>Three repositories, one direction of travel. All work is built in Dev; a finished phase promotes to Quality for end-to-end testing; Prod receives the finished product only. Nothing is ever edited in place outside Dev, and each repo keeps its own data &mdash; nothing crosses between them.</p>
+              <div class="chain">
+                <div class="step"><span class="n">DEV</span><h4>Witness-Dev</h4><p>All building happens here &mdash; one PR at a time, five-layer reviews, merges on my word</p></div>
+                <span class="arr">&rarr;</span>
+                <div class="step"><span class="n">AT PHASE CLOSE</span><h4>Promote</h4><p>The closed phase moves to Quality whole &mdash; nothing promotes mid-phase</p></div>
+                <span class="arr">&rarr;</span>
+                <div class="step"><span class="n">QUALITY</span><h4>Witness-Quality</h4><p>End-to-end testing of the promoted phase, as a whole system</p></div>
+                <span class="arr">&rarr;</span>
+                <div class="step gate"><span class="n">PROD</span><h4>Witness-Prod</h4><p>The finished product only &mdash; phases don&rsquo;t promote here during the build</p></div>
+              </div>
+              <p class="loopnote">&#8635; A defect found in Quality loops back: one fix PR in Dev, the full review, my merge word, promote again, retest. Quality is never patched directly.</p>
 
               <h3 class="org-h">Where Things Live</h3>
               <div class="tiles">
