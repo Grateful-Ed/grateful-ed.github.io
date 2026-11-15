@@ -344,6 +344,12 @@ body { display: flex; flex-direction: column; height: 100dvh; overflow: hidden; 
 .card h3 { font-size: 19px; margin: 0 0 6px; line-height: 1.25; }
 .card p { margin: 0; color: var(--ink-2); font-size: 15.5px; line-height: 1.45; }
 .cards .card:last-child { grid-column: 1 / -1; }
+.demo-note {
+  font-style: italic;
+  color: var(--ink-3);
+  font-size: 14.5px;
+  margin: 16px 0 8px;
+}
 .card .go {
   margin-top: auto;
   padding-top: 10px;
