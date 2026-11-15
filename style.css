@@ -161,6 +161,12 @@ figure img {
   width: 100%;
   height: auto;
 }
+figure video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #000;
+}
 figcaption {
   font-size: 13.5px;
   font-style: italic;
