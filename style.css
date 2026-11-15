@@ -343,7 +343,6 @@ body { display: flex; flex-direction: column; height: 100dvh; overflow: hidden; 
 .card:hover { border-color: var(--rule); }
 .card h3 { font-size: 19px; margin: 0 0 6px; line-height: 1.25; }
 .card p { margin: 0; color: var(--ink-2); font-size: 15.5px; line-height: 1.45; }
-.cards .card:last-child { grid-column: 1 / -1; }
 .demo-note {
   font-style: italic;
   color: var(--ink-3);
@@ -485,4 +484,54 @@ body { display: flex; flex-direction: column; height: 100dvh; overflow: hidden; 
 }
 @media (max-width: 640px) {
   .bubble { font-size: 13.5px; max-width: 58%; left: 29%; top: 4%; padding: 9px 12px; }
+}
+
+/* ---------- AI Strategies: sub-tabs and the org structure ---------- */
+.subtabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 18px 0 6px; border-bottom: 1px solid var(--rule-soft); }
+.subtab {
+  font: inherit; font-size: 15px; background: none; cursor: pointer;
+  border: 1px solid transparent; border-bottom: none; border-radius: 6px 6px 0 0;
+  padding: 7px 14px 8px; color: var(--ink-2);
+}
+.subtab[aria-selected="true"] {
+  background: var(--paper-panel); border-color: var(--rule-soft);
+  color: var(--ink); font-weight: 700; box-shadow: var(--shadow);
+}
+.subpanel { padding-top: 14px; }
+.subpanel[hidden] { display: none; }
+.strategy-fig svg { width: 100%; height: auto; display: block; }
+.org-h { font-size: 18.5px; margin: 28px 0 8px; }
+.chain { display: flex; flex-wrap: wrap; align-items: stretch; gap: 6px; margin: 10px 0 4px; }
+.step {
+  flex: 1 1 128px; background: var(--paper-panel); border: 1px solid var(--rule-soft);
+  border-radius: 6px; padding: 9px 11px 8px; box-shadow: var(--shadow);
+}
+.step .n { display: block; font-size: 11px; letter-spacing: 1.5px; color: var(--ink-3); }
+.step h4 { margin: 2px 0 3px; font-size: 16px; }
+.step p { margin: 0; font-size: 13.5px; line-height: 1.4; color: var(--ink-2); }
+.step.gate { border: 2px solid var(--margin); }
+.step.gate .n { color: var(--margin); }
+.arr { align-self: center; color: var(--accent); font-size: 15px; }
+.loopnote { font-style: italic; color: var(--ink-3); font-size: 14.5px; margin: 8px 0 0; }
+.layer { display: flex; gap: 14px; padding: 9px 0; border-top: 1px solid var(--rule-soft); }
+.layer .no { font-size: 21px; font-weight: 700; color: var(--accent); min-width: 30px; }
+.layer h4 { margin: 0 0 2px; font-size: 16px; }
+.layer p { margin: 0; font-size: 14.5px; color: var(--ink-2); }
+.phase { display: flex; gap: 12px; align-items: baseline; padding: 8px 0; border-top: 1px solid var(--rule-soft); }
+.phase h4 { margin: 0; font-size: 16px; min-width: 205px; }
+.phase p { margin: 0; font-size: 14.5px; color: var(--ink-2); }
+.pill {
+  margin-left: auto; flex: none; font-size: 11px; letter-spacing: 1.2px;
+  padding: 2px 9px; border-radius: 20px; border: 1px solid var(--rule); color: var(--ink-3);
+}
+.pill.now { border-color: var(--accent); color: var(--accent); font-weight: 700; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin-top: 10px; }
+.tile { background: var(--paper-panel); border: 1px solid var(--rule-soft); border-radius: 6px; padding: 11px 13px; box-shadow: var(--shadow); }
+.tile h4 { margin: 0 0 3px; font-size: 15.5px; }
+.tile .where { font-size: 12px; letter-spacing: 1.2px; color: var(--ink-3); margin: 0 0 4px; }
+.tile p { margin: 0; font-size: 14px; color: var(--ink-2); }
+@media (max-width: 640px) {
+  .phase { flex-wrap: wrap; }
+  .phase h4 { min-width: 0; }
+  .pill { margin-left: 0; }
 }

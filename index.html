@@ -28,6 +28,7 @@
         <button type="button" class="tab" role="tab" data-tab="ship-safe" aria-selected="false">Ship Safe</button>
         <button type="button" class="tab" role="tab" data-tab="witness" aria-selected="false">Witness</button>
         <button type="button" class="tab" role="tab" data-tab="clear-window" aria-selected="false">Clear Window</button>
+        <button type="button" class="tab" role="tab" data-tab="ai-strategies" aria-selected="false">AI Strategies</button>
         <button type="button" class="tab" role="tab" data-tab="what-i-do" aria-selected="false">What I Do</button>
         <button type="button" class="tab" role="tab" data-tab="experience" aria-selected="false">Experience</button>
         <button type="button" class="tab" role="tab" data-tab="contact" aria-selected="false">Contact</button>
@@ -62,6 +63,11 @@
             <button type="button" class="card" data-goto="clear-window">
               <h3>Clear Window</h3>
               <p>Ask &ldquo;show me how&rdquo; and the answer gets drawn on your screen, telestrator-style. The AI holds the marker; it never clicks.</p>
+              <span class="go">Open &rarr;</span>
+            </button>
+            <button type="button" class="card" data-goto="ai-strategies">
+              <h3>AI Strategies</h3>
+              <p>How I put AI to work &mdash; the limb-and-gap rule, and the org structure my projects run on.</p>
               <span class="go">Open &rarr;</span>
             </button>
           </div>
@@ -160,16 +166,257 @@
           </div>
         </section>
 
+        <section class="panel" data-panel="ai-strategies" hidden>
+          <div class="entry">
+            <h2 id="strategies-h"><span class="entry-no">Entry 5</span> AI Strategies</h2>
+            <p>I am constantly developing AI strategies on how to properly utilize AI. Each strategy gets its own page here as it settles.</p>
+
+            <div class="subtabs" role="tablist" aria-label="AI strategies">
+              <button type="button" class="subtab" role="tab" data-subtab="limb-gap" aria-selected="true">Limb &amp; Gap</button>
+              <button type="button" class="subtab" role="tab" data-subtab="org" aria-selected="false">AI Org Structure</button>
+            </div>
+
+            <div class="subpanel" data-subpanel="limb-gap">
+              <figure class="photo-wide strategy-fig">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" role="img" aria-label="The limb and gap model: AI fills gaps and shortens limbs; the head — judgment — is never replaced">
+                  <style>
+                    .t  { font-family: Georgia, "Iowan Old Style", "Times New Roman", serif; }
+                    .h  { font-size: 22px; font-weight: bold; letter-spacing: 2px; fill: var(--ink); }
+                    .hl { font-size: 20px; font-weight: bold; letter-spacing: 1.5px; fill: var(--ink); }
+                    .s  { font-size: 15.5px; font-style: italic; fill: var(--ink-3); }
+                  </style>
+
+                  <!-- ruled notebook paper -->
+                  <g stroke="var(--rule-soft)" stroke-width="1">
+                    <line x1="0" y1="92"  x2="920" y2="92"/>
+                    <line x1="0" y1="132" x2="920" y2="132"/>
+                    <line x1="0" y1="172" x2="920" y2="172"/>
+                    <line x1="0" y1="212" x2="920" y2="212"/>
+                    <line x1="0" y1="252" x2="920" y2="252"/>
+                    <line x1="0" y1="292" x2="920" y2="292"/>
+                    <line x1="0" y1="332" x2="920" y2="332"/>
+                    <line x1="0" y1="372" x2="920" y2="372"/>
+                    <line x1="0" y1="412" x2="920" y2="412"/>
+                    <line x1="0" y1="452" x2="920" y2="452"/>
+                  </g>
+                  <line x1="54" y1="0" x2="54" y2="480" stroke="var(--margin)" stroke-width="2" opacity="0.55"/>
+
+                  <!-- ===== the figure ===== -->
+                  <!-- legs -->
+                  <rect x="431" y="306" width="24" height="128" rx="12" fill="var(--ink-2)"/>
+                  <rect x="465" y="306" width="24" height="128" rx="12" fill="var(--ink-2)"/>
+                  <!-- torso -->
+                  <rect x="426" y="156" width="68" height="162" rx="28" fill="var(--ink-2)"/>
+
+                  <!-- LEFT: the limb, shortened. Ghost = the limb at its old length -->
+                  <path d="M 262 219 C 218 231, 176 239, 140 245" fill="none" stroke="var(--ink-3)" stroke-width="25" stroke-linecap="round" stroke-dasharray="3 9" opacity="0.45"/>
+                  <circle cx="129" cy="247" r="14" fill="none" stroke="var(--ink-3)" stroke-width="2.5" stroke-dasharray="4 5" opacity="0.7"/>
+                  <!-- the limb as it is now -->
+                  <path d="M 430 182 C 372 195, 314 206, 260 219" fill="none" stroke="var(--ink-2)" stroke-width="25" stroke-linecap="round"/>
+                  <circle cx="250" cy="221" r="14" fill="var(--ink-2)"/>
+                  <!-- compression chevrons: the long way, taken off -->
+                  <path d="M 168 190 l 15 9 l -15 9" fill="none" stroke="var(--accent)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M 224 179 l 15 9 l -15 9" fill="none" stroke="var(--accent)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+                  <!-- RIGHT: the gap, filled. Dashed = the missing capability -->
+                  <path d="M 490 182 C 524 192, 547 200, 565 208" fill="none" stroke="var(--ink-2)" stroke-width="25" stroke-linecap="round"/>
+                  <circle cx="573" cy="210" r="12" fill="var(--ink-2)"/>
+                  <g transform="rotate(14 590 216)">
+                    <rect x="590" y="204" width="94" height="24" rx="12" fill="none" stroke="var(--ink-3)" stroke-width="2.5" stroke-dasharray="6 6"/>
+                  </g>
+                  <circle cx="700" cy="240" r="13" fill="none" stroke="var(--ink-3)" stroke-width="2.5" stroke-dasharray="4 5"/>
+                  <!-- the piece that fills it, on its way in -->
+                  <g transform="rotate(14 548 140)">
+                    <rect x="548" y="128" width="94" height="24" rx="12" fill="var(--accent)"/>
+                  </g>
+                  <circle cx="658" cy="164" r="13" fill="var(--accent)"/>
+                  <path d="M 664 184 C 678 198, 686 210, 689 224" fill="none" stroke="var(--accent)" stroke-width="3.5" stroke-linecap="round"/>
+                  <path d="M 680 216 l 10 14 l 12 -11" fill="none" stroke="var(--accent)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+                  <!-- HEAD: never replaced -->
+                  <circle cx="460" cy="118" r="45" fill="none" stroke="var(--accent)" stroke-width="2" opacity="0.8"/>
+                  <circle cx="460" cy="118" r="33" fill="var(--accent)"/>
+
+                  <!-- ===== labels (anchors only — the picture carries it) ===== -->
+                  <text class="t h"  x="460" y="38"  text-anchor="middle">THE HEAD DECIDES</text>
+                  <text class="t s"  x="460" y="63"  text-anchor="middle">judgment is never replaced</text>
+
+                  <text class="t hl" x="66" y="356">SHORTEN THE LIMB</text>
+                  <text class="t s"  x="66" y="382">work you can do — done faster</text>
+
+                  <text class="t hl" x="854" y="356" text-anchor="end">FILL THE GAP</text>
+                  <text class="t s"  x="854" y="382" text-anchor="end">a capability you don&rsquo;t have</text>
+                </svg>
+              </figure>
+              <p>The rule in one breath: AI fills the gaps &mdash; capabilities I don&rsquo;t have, like the coding that built the tools on this page &mdash; and it shortens the limbs &mdash; work I know how to do that is long and costly, like drafting the documents a project runs on. It never replaces the head: the design and the judgment stay with the person. Asking AI to replace the head is how you get tools nobody uses.</p>
+            </div>
+
+            <div class="subpanel" data-subpanel="org" hidden>
+              <p>How We Build Witness &mdash; a phase waterfall, one PR at a time, five-layer reviews. Nothing merges without my word. This is the org structure the process runs on: the seats, the gates, and the loops.</p>
+
+              <h3 class="org-h">The Cast</h3>
+              <figure class="photo-wide strategy-fig">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 456" role="img" aria-label="The build org chart: William directs; Faye manages and reviews; Claude builds from briefs that pass through William's gate; Bionicles audit every PR; Super Bionicles stamp every claim">
+                  <style>
+                    .t  { font-family: Georgia, "Iowan Old Style", "Times New Roman", serif; }
+                    .n  { font-size: 19px; font-weight: bold; letter-spacing: 1px; fill: var(--ink); }
+                    .r  { font-size: 13.5px; font-style: italic; fill: var(--ink-2); }
+                    .d  { font-size: 14px; fill: var(--ink-2); }
+                    .st { font-size: 11.5px; fill: var(--ink-3); }
+                    .lb { font-size: 12.5px; font-style: italic; fill: var(--ink-3); }
+                    .box { fill: var(--paper-panel); stroke: var(--rule); stroke-width: 1.5; }
+                    .top { fill: var(--paper-panel); stroke: var(--margin); stroke-width: 2.5; }
+                    .ln { stroke: var(--rule); stroke-width: 2; fill: none; }
+                  </style>
+
+                  <!-- ruled notebook paper -->
+                  <g stroke="var(--rule-soft)" stroke-width="1">
+                    <line x1="0" y1="76"  x2="920" y2="76"/>
+                    <line x1="0" y1="116" x2="920" y2="116"/>
+                    <line x1="0" y1="156" x2="920" y2="156"/>
+                    <line x1="0" y1="196" x2="920" y2="196"/>
+                    <line x1="0" y1="236" x2="920" y2="236"/>
+                    <line x1="0" y1="276" x2="920" y2="276"/>
+                    <line x1="0" y1="316" x2="920" y2="316"/>
+                    <line x1="0" y1="356" x2="920" y2="356"/>
+                    <line x1="0" y1="396" x2="920" y2="396"/>
+                    <line x1="0" y1="436" x2="920" y2="436"/>
+                  </g>
+                  <line x1="54" y1="0" x2="54" y2="456" stroke="var(--margin)" stroke-width="2" opacity="0.55"/>
+
+                  <!-- connectors -->
+                  <path class="ln" d="M 460 116 L 460 170"/>
+                  <path class="ln" d="M 380 262 L 380 296 L 170 296 L 170 330"/>
+                  <path class="ln" d="M 460 330 L 460 262"/>
+                  <path class="ln" d="M 750 330 L 750 296 L 545 296 L 545 262"/>
+                  <g fill="var(--accent)">
+                    <path d="M 303 373 l 13 7 l -13 7 z"/>
+                    <path d="M 593 373 l 13 7 l -13 7 z"/>
+                  </g>
+                  <text class="t lb" x="275" y="288" text-anchor="middle">briefs · via the gate</text>
+                  <text class="t lb" x="470" y="300">claims</text>
+                  <text class="t lb" x="648" y="288" text-anchor="middle">stamps</text>
+
+                  <!-- William -->
+                  <rect class="top" x="335" y="24" width="250" height="92" rx="10"/>
+                  <text class="t n" x="460" y="58"  text-anchor="middle">WILLIAM</text>
+                  <text class="t r" x="460" y="80"  text-anchor="middle">Director</text>
+                  <text class="t d" x="460" y="102" text-anchor="middle">Final call on everything.</text>
+
+                  <!-- Faye -->
+                  <rect class="box" x="335" y="170" width="250" height="92" rx="10"/>
+                  <text class="t n" x="460" y="204" text-anchor="middle">FAYE</text>
+                  <text class="t r" x="460" y="226" text-anchor="middle">Project manager &amp; design consultant</text>
+                  <text class="t d" x="460" y="248" text-anchor="middle">Briefs, reviews, records.</text>
+
+                  <!-- Claude -->
+                  <rect class="box" x="40" y="330" width="260" height="100" rx="10"/>
+                  <text class="t n" x="170" y="364" text-anchor="middle">CLAUDE</text>
+                  <text class="t r" x="170" y="387" text-anchor="middle">The builder</text>
+                  <text class="t d" x="170" y="409" text-anchor="middle">Hardcodes from the briefs.</text>
+
+                  <!-- Bionicles -->
+                  <rect class="box" x="330" y="330" width="260" height="100" rx="10"/>
+                  <text class="t n" x="460" y="364" text-anchor="middle">BIONICLES</text>
+                  <text class="t r" x="460" y="387" text-anchor="middle">Ephemeral auditors</text>
+                  <text class="t d" x="460" y="409" text-anchor="middle">One fresh pass per PR, then gone.</text>
+
+                  <!-- Super Bionicles -->
+                  <rect class="box" x="620" y="330" width="260" height="100" rx="10"/>
+                  <text class="t n" x="750" y="364" text-anchor="middle">SUPER BIONICLES</text>
+                  <text class="t r" x="750" y="387" text-anchor="middle">Evidence clerks</text>
+                  <text class="t d" x="750" y="409" text-anchor="middle">Stamp every claim. No verdicts.</text>
+                  <text class="t st" x="750" y="424" text-anchor="middle">Plan seat 208/208 · PR seat 34/34 stamps upheld</text>
+                </svg>
+              </figure>
+              <p>Five seats. I direct and gate: briefs and reports reach Claude only through me, and merges happen only on my explicit word, per PR &mdash; I am the bottleneck by design. Faye manages the project and consults on design: she writes the briefs, runs the reviews, and keeps the records. Claude builds. Bionicles audit one PR at a time and are gone. Super Bionicles keep the evidence: every claim stamped, no verdicts of their own.</p>
+
+              <h3 class="org-h">How We Plan</h3>
+              <div class="chain">
+                <div class="step"><span class="n">STEP 1</span><h4>Start from the spec</h4><p>The live spec, as it stands</p></div>
+                <span class="arr">&rarr;</span>
+                <div class="step"><span class="n">STEP 2</span><h4>Pre-build review</h4><p>Item by item, before any code</p></div>
+                <span class="arr">&rarr;</span>
+                <div class="step"><span class="n">STEP 3</span><h4>Write the plan</h4><p>Plan-first, hard stop after</p></div>
+                <span class="arr">&rarr;</span>
+                <div class="step"><span class="n">STEP 4</span><h4>Review the plan</h4><p>Like a PR &mdash; claims &amp; stamps</p></div>
+                <span class="arr">&rarr;</span>
+                <div class="step"><span class="n">STEP 5</span><h4>Rule the questions</h4><p>Lettered, with recommendations</p></div>
+                <span class="arr">&rarr;</span>
+                <div class="step gate"><span class="n">STEP 6 &middot; THE GO</span><h4>GO</h4><p>William&rsquo;s alone, with conditions</p></div>
+              </div>
+
+              <h3 class="org-h">The PR Loop</h3>
+              <div class="chain">
+                <div class="step"><span class="n">STEP 1</span><h4>Brief</h4><p>Item by item, before any code</p></div>
+                <span class="arr">&rarr;</span>
+                <div class="step"><span class="n">STEP 2</span><h4>Build</h4><p>Claude, from the brief</p></div>
+                <span class="arr">&rarr;</span>
+                <div class="step"><span class="n">STEP 3</span><h4>Five-layer review</h4><p>Faye, firsthand</p></div>
+                <span class="arr">&rarr;</span>
+                <div class="step"><span class="n">STEP 4</span><h4>Fixes</h4><p>Inside the same cycle</p></div>
+                <span class="arr">&rarr;</span>
+                <div class="step"><span class="n">STEP 5</span><h4>Re-verify</h4><p>The new head, checked again</p></div>
+                <span class="arr">&rarr;</span>
+                <div class="step gate"><span class="n">STEP 6 &middot; THE GATE</span><h4>Merge word</h4><p>William&rsquo;s explicit word, per PR</p></div>
+              </div>
+              <p class="loopnote">&#8635; Then back to Brief for the next PR &mdash; one full loop per PR.</p>
+
+              <h3 class="org-h">The Five Layers</h3>
+              <div class="layer"><span class="no">1</span><div><h4>Full diff read</h4><p>Every changed file, whole</p></div></div>
+              <div class="layer"><span class="no">2</span><div><h4>Call-site pass</h4><p>Checked at its callers &amp; readers</p></div></div>
+              <div class="layer"><span class="no">3</span><div><h4>Full suite + smoke</h4><p>Run by Faye herself &mdash; any failure fails the PR</p></div></div>
+              <div class="layer"><span class="no">4</span><div><h4>Independent Bionicle pass</h4><p>Super stamps ride here &mdash; every stamp double-checked by Faye</p></div></div>
+              <div class="layer"><span class="no">5</span><div><h4>The verdict names the exact head</h4><p>One named commit, re-verified before merge</p></div></div>
+              <p class="loopnote">Small fixes found in review are resolved inside the review. Big things go to William untouched.</p>
+
+              <h3 class="org-h">How Truth Is Kept</h3>
+              <div class="chain">
+                <div class="step"><h4>Claim</h4><p>Bionicle, with citation or probe</p></div>
+                <span class="arr">&rarr;</span>
+                <div class="step"><h4>Stamp</h4><p>REPRODUCED or DOES NOT REPRODUCE</p></div>
+                <span class="arr">&rarr;</span>
+                <div class="step"><h4>Double-check</h4><p>Faye, firsthand</p></div>
+                <span class="arr">&rarr;</span>
+                <div class="step"><h4>Grade</h4><p>On the sheet, in the chat, in the next packet</p></div>
+              </div>
+              <p class="loopnote">No claim travels on trust.</p>
+
+              <h3 class="org-h">The Phases</h3>
+              <div class="phase"><h4>1 &middot; Mock hosts</h4><p>Two fake warehouse systems built first, so Witness development always has a host to test against. Signed off 2026-11-11.</p><span class="pill">CLOSED</span></div>
+              <div class="phase"><h4>2 &middot; The record</h4><p>2.1 Store core: built as seven PRs, all seven reviewed. 2.2 Configuration layer and config pages: next.</p><span class="pill now">CURRENT</span></div>
+              <div class="phase"><h4>3 &middot; Host integration</h4><p>Mirror in, acts out.</p><span class="pill">AHEAD</span></div>
+              <div class="phase"><h4>4 &middot; The gate &amp; signed acts</h4><p>The two signed acts: posting a receiving, confirming a load.</p><span class="pill">AHEAD</span></div>
+              <div class="phase"><h4>5 &middot; Interpretation &amp; delegation</h4><p>Configured model services, the interpretation layer, the delegator.</p><span class="pill">AHEAD</span></div>
+              <div class="phase"><h4>6 &middot; Ontology &amp; keeper</h4><p>The settle ladder&rsquo;s worklist, and the keeper that maintains the working set.</p><span class="pill">AHEAD</span></div>
+              <div class="phase"><h4>7 &middot; Surfaces</h4><p>Desk, phone, glasses, finger piece.</p><span class="pill">AHEAD</span></div>
+              <div class="phase"><h4>8 &middot; The worker loop, whole</h4><p>Receiving cross-check, voice completion, outage behavior.</p><span class="pill">AHEAD</span></div>
+              <p class="loopnote">A phase closes only when every PR is merged, register items are deleted or formally transferred, contracts are frozen at a named version, the hard pass is done &mdash; and William signs off.</p>
+
+              <h3 class="org-h">Where Things Live</h3>
+              <div class="tiles">
+                <div class="tile"><p class="where">GOOGLE DOC</p><h4>The spec</h4><p>One live document &mdash; the bible of the build.</p></div>
+                <div class="tile"><p class="where">GOOGLE SHEET</p><h4>Phase tracker</h4><p>Where each phase and PR stands.</p></div>
+                <div class="tile"><p class="where">GOOGLE DOC</p><h4>PR review reports &amp; questions</h4><p>Verdicts, findings, and William&rsquo;s comments &mdash; preserved word-for-word.</p></div>
+                <div class="tile"><p class="where">REGISTER</p><h4>Open items register</h4><p>Read before any build goes out. Resolved items are deleted.</p></div>
+                <div class="tile"><p class="where">BRIEFS FOLDER</p><h4>Fix lists</h4><p>Kept with the briefs they belong to.</p></div>
+                <div class="tile"><p class="where">REPOS &middot; BOTH PRIVATE</p><h4>Witness-Dev &amp; Witness-Prod</h4><p>Dev: all work happens here. Prod: promotions only, at phase close.</p></div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
         <section class="panel" data-panel="what-i-do" hidden>
           <div class="entry">
-            <h2 id="skills-h"><span class="entry-no">Entry 5</span> What I Do</h2>
+            <h2 id="skills-h"><span class="entry-no">Entry 6</span> What I Do</h2>
             <p>Software implementation is the home turf: taking a system into a real operation and making it stick. Underneath it sits Six Sigma and continuous improvement &mdash; watching a manual workflow until the bottleneck shows itself, then removing it. And the newest entry in the notebook is AI implementation for logistics teams &mdash; taking a real operation, finding the step where an AI tool genuinely helps, and building it with the guardrails the work demands. I direct AI coding collaborators the way you would direct a build team: specifications first, tests before trust, and a human decision at every gate that matters.</p>
           </div>
         </section>
 
         <section class="panel" data-panel="experience" hidden>
           <div class="entry">
-            <h2 id="exp-h"><span class="entry-no">Entry 6</span> Experience</h2>
+            <h2 id="exp-h"><span class="entry-no">Entry 7</span> Experience</h2>
 
             <div class="job first">
               <h3>Expeditors International of Washington, Inc.</h3>
@@ -248,6 +495,17 @@
         });
         Array.prototype.forEach.call(document.querySelectorAll('[data-goto]'), function (el) {
           el.addEventListener('click', function () { activate(el.getAttribute('data-goto'), true); });
+        });
+        Array.prototype.forEach.call(document.querySelectorAll('.subtab'), function (b) {
+          b.addEventListener('click', function () {
+            var wrap = b.closest('[data-panel]');
+            Array.prototype.forEach.call(wrap.querySelectorAll('.subtab'), function (x) {
+              x.setAttribute('aria-selected', x === b ? 'true' : 'false');
+            });
+            Array.prototype.forEach.call(wrap.querySelectorAll('.subpanel'), function (p) {
+              p.hidden = p.getAttribute('data-subpanel') !== b.getAttribute('data-subtab');
+            });
+          });
         });
         window.addEventListener('hashchange', function () { activate(location.hash.slice(1), false); });
         activate(location.hash.slice(1) || 'summary', false);
