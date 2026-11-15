@@ -351,6 +351,18 @@ body { display: flex; flex-direction: column; height: 100dvh; overflow: hidden; 
   font-size: 15px;
   font-weight: 700;
 }
+.sum-videos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 0 0 18px;
+}
+.sum-videos figure {
+  background: var(--paper);
+  border: 1px solid var(--photo-line);
+  padding: 7px 7px 9px;
+  box-shadow: var(--shadow);
+}
 .sum-foot {
   flex: none;
   margin: 16px 0 0;
@@ -375,6 +387,7 @@ body { display: flex; flex-direction: column; height: 100dvh; overflow: hidden; 
      is the button, and the tab bar above names every project too —
      so the whole summary still fits one screen with no scrolling */
   .cards { grid-template-columns: 1fr 1fr; gap: 9px; }
+  .sum-videos { grid-template-columns: 1fr; gap: 9px; margin-bottom: 13px; }
   .card { padding: 11px 14px 9px; justify-content: center; }
   .card h3 { font-size: 16.5px; margin: 0; }
   .card p { display: none; }
@@ -407,6 +420,7 @@ body { display: flex; flex-direction: column; height: 100dvh; overflow: hidden; 
   .sum-headline { grid-column: 1 / -1; font-size: 23px; margin-bottom: 20px; }
   .sum-about { grid-column: 1; font-size: 17.5px; margin: 0; align-self: start; }
   .panel-summary .cards { grid-column: 2; }
+  .sum-videos { grid-column: 1 / -1; margin: 20px 0 4px; }
   .sum-foot { grid-column: 1 / -1; }
 
   .panel .entry, .panel .colophon { padding: 28px 34px 24px; }
